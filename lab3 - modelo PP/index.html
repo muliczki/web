@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/estilos.css" />
+    <!-- <img src="./assets/spinner.gif" alt=""> -->
+    <script src="./js/scripts.js" type="module" defer></script>
+    <title>Modelo parcial</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Llena el formulario de Alta</h1>
+
+      <form>
+        <fieldset>
+          <legend>información del anuncio</legend>
+          <input type="hidden" name="id">
+          <label for="txtTitulo">titulo: </label>
+          <input
+            type="text"
+            id="txtTitulo"
+            name="titulo"
+            placeholder="Titulo"
+            required
+          />
+          <!-- <div>
+            <div class="row">
+              <label for="RadioTransaccion">transaccion:</label>
+            </div>
+            <div class="row">
+              <label for="RadioTransaccion">transaccion:</label>
+            </div>
+
+            <label
+              >alquiler <input type="radio" name="transaccion" value="alquiler"
+            /></label>
+          </div> -->
+          <label for="RadioTransaccion">transaccion:</label>
+          <label
+            >venta <input type="radio" name="transaccion" value="venta"
+          /></label>
+          <label
+            >alquiler <input type="radio" name="transaccion" value="alquiler"
+          /></label>
+
+
+
+          <label for="txtDescripcion">descripcion: </label>
+          <input
+            type="text"
+            id="txtDescripcion"
+            name="descripcion"
+            placeholder="Descripcion"
+            required
+          />
+
+          <label for="txtPrecio">precio: </label>
+          <input
+            type="text"
+            id="txtPrecio"
+            name="precio"
+            placeholder="Precio"
+            required
+            onkeypress='return event.charCode >= 48 && event.charCode <= 57'
+          />
+
+          <label for="txtBanios">cantidad de baños: </label>
+          <input
+            type="text"
+            id="txtBanios"
+            name="banios"
+            placeholder="Baños"
+            required
+            onkeypress='return event.charCode >= 48 && event.charCode <= 57'
+          />
+
+          <!-- min y max si es type number > lista desplegable -->
+          <label for="txtAutos">cantidad de autos: </label>
+          <input
+            type="text"
+            id="txtAutos"
+            name="autos"
+            placeholder="Autos"
+            required
+            onkeypress='return event.charCode >= 48 && event.charCode <= 57'
+          />
+
+          <label for="txtDormitorios">cantidad de dormitorios:</label>
+          <input
+            type="text"
+            id="txtDormitorios"
+            name="dormitorios"
+            placeholder="Dormitorios"
+            required
+            onkeypress='return event.charCode >= 48 && event.charCode <= 57'
+          />
+        </fieldset>
+
+        <div id="divSubmitForm">
+          <input class="boton" type="submit" id="btnGuardar" value="Guardar" />
+        </div>        
+
+        <div id="divAccionesTabla" class="oculto">
+
+          <input class="boton" type="button" id="btnModificar" value="Modificar"/>
+          <input class="boton" type="button" id="btnEliminarElemento" value="Eliminar"/>
+          <input class="boton" type="button" id="btnCancelarCambios" value="Cancelar"/>
+
+        </div>
+
+        <div id="spinner-container"></div>
+        <div id="divTabla">
+
+          
+        </div>
+
+      </form>
+    </div>
+  </body>
+</html>
